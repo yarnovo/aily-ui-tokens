@@ -3,65 +3,65 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>xhs-ui tokens · 设计 token 演示</title>
+<title>akong tokens · 设计 token 演示</title>
 <link rel="stylesheet" href="../src/tokens.css" />
 <link rel="stylesheet" href="../src/tokens.dark.css" />
 <style>
   body {
-    font-family: var(--xui-font-sans);
-    background: var(--xui-bg);
-    color: var(--xui-fg);
+    font-family: var(--ak-font-sans);
+    background: var(--ak-bg);
+    color: var(--ak-fg);
     margin: 0;
-    padding: var(--xui-space-6);
+    padding: var(--ak-space-6);
     max-width: 760px;
     margin-inline: auto;
   }
-  h1 { font-size: var(--xui-text-2xl); font-weight: var(--xui-weight-semibold); letter-spacing: var(--xui-tracking-tight); margin: 0 0 var(--xui-space-2); }
-  .sub { color: var(--xui-fg-subtle); font-size: var(--xui-text-sm); margin-bottom: var(--xui-space-8); }
-  h2 { font-size: var(--xui-text-md); font-weight: var(--xui-weight-semibold); margin: var(--xui-space-8) 0 var(--xui-space-3); letter-spacing: var(--xui-tracking-tight); }
-  .grid { display: grid; gap: var(--xui-space-2); grid-template-columns: repeat(6, 1fr); }
+  h1 { font-size: var(--ak-text-2xl); font-weight: var(--ak-weight-semibold); letter-spacing: var(--ak-tracking-tight); margin: 0 0 var(--ak-space-2); }
+  .sub { color: var(--ak-fg-subtle); font-size: var(--ak-text-sm); margin-bottom: var(--ak-space-8); }
+  h2 { font-size: var(--ak-text-md); font-weight: var(--ak-weight-semibold); margin: var(--ak-space-8) 0 var(--ak-space-3); letter-spacing: var(--ak-tracking-tight); }
+  .grid { display: grid; gap: var(--ak-space-2); grid-template-columns: repeat(6, 1fr); }
   .swatch { display: flex; flex-direction: column; gap: 4px; }
-  .swatch > .chip { aspect-ratio: 1; border-radius: var(--xui-radius-md); border: 1px solid var(--xui-border-subtle); }
-  .swatch > .label { font-size: var(--xui-text-xs); color: var(--xui-fg-muted); }
-  .row { display: flex; flex-wrap: wrap; gap: var(--xui-space-3); align-items: baseline; }
-  .row > .item { padding: var(--xui-space-2) var(--xui-space-3); background: var(--xui-bg-subtle); border-radius: var(--xui-radius-md); font-size: var(--xui-text-sm); color: var(--xui-fg-muted); }
-  .text-xs { font-size: var(--xui-text-xs); }
-  .text-sm { font-size: var(--xui-text-sm); }
-  .text-base { font-size: var(--xui-text-base); }
-  .text-md { font-size: var(--xui-text-md); }
-  .text-lg { font-size: var(--xui-text-lg); }
-  .text-xl { font-size: var(--xui-text-xl); }
-  .text-2xl { font-size: var(--xui-text-2xl); }
-  .text-3xl { font-size: var(--xui-text-3xl); }
+  .swatch > .chip { aspect-ratio: 1; border-radius: var(--ak-radius-md); border: 1px solid var(--ak-border-subtle); }
+  .swatch > .label { font-size: var(--ak-text-xs); color: var(--ak-fg-muted); }
+  .row { display: flex; flex-wrap: wrap; gap: var(--ak-space-3); align-items: baseline; }
+  .row > .item { padding: var(--ak-space-2) var(--ak-space-3); background: var(--ak-bg-subtle); border-radius: var(--ak-radius-md); font-size: var(--ak-text-sm); color: var(--ak-fg-muted); }
+  .text-xs { font-size: var(--ak-text-xs); }
+  .text-sm { font-size: var(--ak-text-sm); }
+  .text-base { font-size: var(--ak-text-base); }
+  .text-md { font-size: var(--ak-text-md); }
+  .text-lg { font-size: var(--ak-text-lg); }
+  .text-xl { font-size: var(--ak-text-xl); }
+  .text-2xl { font-size: var(--ak-text-2xl); }
+  .text-3xl { font-size: var(--ak-text-3xl); }
   .space-row { display: flex; align-items: flex-end; gap: 4px; }
-  .space-row > div { background: var(--xui-accent); height: 24px; }
-  .radius-row { display: flex; gap: var(--xui-space-3); }
-  .radius-row > div { width: 56px; height: 56px; background: var(--xui-bg-subtle); border: 1px solid var(--xui-border); display: flex; align-items: center; justify-content: center; font-size: var(--xui-text-xs); color: var(--xui-fg-muted); }
-  .shadow-row { display: flex; gap: var(--xui-space-4); padding: var(--xui-space-4) 0; }
-  .shadow-row > div { width: 80px; height: 56px; background: var(--xui-bg-elevated); border-radius: var(--xui-radius-lg); display: flex; align-items: center; justify-content: center; font-size: var(--xui-text-xs); color: var(--xui-fg-muted); }
-  .toggle { position: fixed; top: 16px; right: 16px; padding: 8px 12px; border-radius: var(--xui-radius-full); background: var(--xui-fg); color: var(--xui-bg); border: 0; font-size: var(--xui-text-sm); cursor: pointer; }
+  .space-row > div { background: var(--ak-accent); height: 24px; }
+  .radius-row { display: flex; gap: var(--ak-space-3); flex-wrap: wrap; }
+  .radius-row > div { width: 56px; height: 56px; background: var(--ak-bg-subtle); border: 1px solid var(--ak-border); display: flex; align-items: center; justify-content: center; font-size: var(--ak-text-xs); color: var(--ak-fg-muted); }
+  .shadow-row { display: flex; gap: var(--ak-space-4); padding: var(--ak-space-4) 0; }
+  .shadow-row > div { width: 80px; height: 56px; background: var(--ak-bg-elevated); border-radius: var(--ak-radius-lg); display: flex; align-items: center; justify-content: center; font-size: var(--ak-text-xs); color: var(--ak-fg-muted); }
+  .toggle { position: fixed; top: 16px; right: 16px; padding: 8px 12px; border-radius: var(--ak-radius-full); background: var(--ak-fg); color: var(--ak-bg); border: 0; font-size: var(--ak-text-sm); cursor: pointer; }
 </style>
 </head>
 <body>
   <button class="toggle" id="t">切换暗色</button>
-  <h1>xhs-ui · 设计 token</h1>
-  <p class="sub">所有组件 var(--xui-*) 取这里 · 改一处全 update</p>
+  <h1>akong · 设计 token</h1>
+  <p class="sub">所有组件 var(--ak-*) 取这里 · 跨端 (Web + RN)</p>
 
   <h2>灰阶 · gray 1-12</h2>
   <div class="grid" id="gray"></div>
 
   <h2>Accent · 红</h2>
-  <div class="grid" style="grid-template-columns: repeat(6, 1fr);" id="accent"></div>
+  <div class="grid" id="accent"></div>
 
   <h2>语义色</h2>
   <div class="row">
-    <div class="item" style="background: var(--xui-bg);">bg</div>
-    <div class="item" style="background: var(--xui-bg-subtle);">bg-subtle</div>
-    <div class="item" style="background: var(--xui-bg-hover);">bg-hover</div>
-    <div class="item" style="background: var(--xui-fg); color: var(--xui-fg-inverse);">fg</div>
-    <div class="item" style="color: var(--xui-fg-muted);">fg-muted</div>
-    <div class="item" style="color: var(--xui-fg-subtle);">fg-subtle</div>
-    <div class="item" style="background: var(--xui-accent); color: var(--xui-accent-fg);">accent</div>
+    <div class="item" style="background: var(--ak-bg);">bg</div>
+    <div class="item" style="background: var(--ak-bg-subtle);">bg-subtle</div>
+    <div class="item" style="background: var(--ak-bg-hover);">bg-hover</div>
+    <div class="item" style="background: var(--ak-fg); color: var(--ak-fg-inverse);">fg</div>
+    <div class="item" style="color: var(--ak-fg-muted);">fg-muted</div>
+    <div class="item" style="color: var(--ak-fg-subtle);">fg-subtle</div>
+    <div class="item" style="background: var(--ak-accent); color: var(--ak-accent-fg);">accent</div>
   </div>
 
   <h2>字号</h2>
@@ -81,20 +81,20 @@
 
   <h2>圆角</h2>
   <div class="radius-row">
-    <div style="border-radius: var(--xui-radius-none);">none</div>
-    <div style="border-radius: var(--xui-radius-sm);">sm</div>
-    <div style="border-radius: var(--xui-radius-md);">md</div>
-    <div style="border-radius: var(--xui-radius-lg);">lg</div>
-    <div style="border-radius: var(--xui-radius-xl);">xl</div>
-    <div style="border-radius: var(--xui-radius-2xl);">2xl</div>
-    <div style="border-radius: var(--xui-radius-full); width: 80px;">full</div>
+    <div style="border-radius: var(--ak-radius-none);">none</div>
+    <div style="border-radius: var(--ak-radius-sm);">sm</div>
+    <div style="border-radius: var(--ak-radius-md);">md</div>
+    <div style="border-radius: var(--ak-radius-lg);">lg</div>
+    <div style="border-radius: var(--ak-radius-xl);">xl</div>
+    <div style="border-radius: var(--ak-radius-2xl);">2xl</div>
+    <div style="border-radius: var(--ak-radius-full); width: 80px;">full</div>
   </div>
 
   <h2>阴影</h2>
   <div class="shadow-row">
-    <div style="box-shadow: var(--xui-shadow-sm);">sm</div>
-    <div style="box-shadow: var(--xui-shadow-md);">md</div>
-    <div style="box-shadow: var(--xui-shadow-lg);">lg</div>
+    <div style="box-shadow: var(--ak-shadow-sm);">sm</div>
+    <div style="box-shadow: var(--ak-shadow-md);">md</div>
+    <div style="box-shadow: var(--ak-shadow-lg);">lg</div>
   </div>
 
 <script>
@@ -102,25 +102,25 @@
   for (let i = 1; i <= 12; i++) {
     const el = document.createElement('div')
     el.className = 'swatch'
-    el.innerHTML = `<div class="chip" style="background: var(--xui-gray-${i});"></div><div class="label">gray-${i}</div>`
+    el.innerHTML = `<div class="chip" style="background: var(--ak-gray-${i});"></div><div class="label">gray-${i}</div>`
     gray.appendChild(el)
   }
   const accent = document.getElementById('accent')
   for (const i of [1, 3, 6, 9, 10, 11]) {
     const el = document.createElement('div')
     el.className = 'swatch'
-    el.innerHTML = `<div class="chip" style="background: var(--xui-accent-${i});"></div><div class="label">accent-${i}</div>`
+    el.innerHTML = `<div class="chip" style="background: var(--ak-accent-${i});"></div><div class="label">accent-${i}</div>`
     accent.appendChild(el)
   }
   const sp = document.getElementById('space')
   for (const i of [1, 2, 3, 4, 5, 6, 8, 10, 12, 16]) {
     const el = document.createElement('div')
-    el.style.width = `var(--xui-space-${i})`
+    el.style.width = `var(--ak-space-${i})`
     el.title = `space-${i}`
     sp.appendChild(el)
     const lbl = document.createElement('span')
     lbl.style.fontSize = '11px'
-    lbl.style.color = 'var(--xui-fg-muted)'
+    lbl.style.color = 'var(--ak-fg-muted)'
     lbl.style.marginLeft = '6px'
     lbl.textContent = i
     sp.appendChild(lbl)

@@ -1,7 +1,7 @@
 {
-  "name": "@xhs-ui/tokens",
+  "name": "@akong/tokens",
   "version": "0.1.0",
-  "description": "xhs-ui 设计 token 底座 · CSS variables + TypeScript 常量",
+  "description": "akong design token 底座 · 跨端 (Web + React Native) · CSS variables + TypeScript hex 真值",
   "type": "module",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yarnovo/xhs-ui-tokens.git"
+    "url": "git+https://github.com/yarnovo/akong-tokens.git"
   },
   "license": "UNLICENSED",
   "private": false
