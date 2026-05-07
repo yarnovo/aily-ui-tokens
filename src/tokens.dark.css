@@ -1,0 +1,57 @@
+/* 暗色覆盖 · 自动跟系统 (prefers-color-scheme) + 手动 .dark class · 二选其一 */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --xui-gray-1: oklch(0.13 0 0);
+    --xui-gray-2: oklch(0.17 0 0);
+    --xui-gray-3: oklch(0.21 0 0);
+    --xui-gray-4: oklch(0.25 0 0);
+    --xui-gray-5: oklch(0.29 0 0);
+    --xui-gray-6: oklch(0.34 0 0);
+    --xui-gray-7: oklch(0.40 0 0);
+    --xui-gray-8: oklch(0.50 0 0);
+    --xui-gray-9: oklch(0.62 0 0);
+    --xui-gray-10: oklch(0.68 0 0);
+    --xui-gray-11: oklch(0.78 0 0);
+    --xui-gray-12: oklch(0.96 0 0);
+
+    --xui-accent-1: oklch(0.18 0.02 12);
+    --xui-accent-3: oklch(0.27 0.06 12);
+    --xui-accent-6: oklch(0.42 0.14 12);
+    --xui-accent-9: oklch(0.65 0.20 12);
+    --xui-accent-10: oklch(0.72 0.21 12);
+    --xui-accent-11: oklch(0.80 0.18 12);
+
+    --xui-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.6);
+    --xui-shadow-md: 0 4px 12px -2px rgb(0 0 0 / 0.5);
+    --xui-shadow-lg: 0 12px 32px -4px rgb(0 0 0 / 0.7);
+  }
+}
+
+/* 手动覆盖 (优先级高于 prefers · 让用方能强制切) */
+:root.dark,
+:root[data-theme="dark"] {
+  --xui-gray-1: oklch(0.13 0 0);
+  --xui-gray-2: oklch(0.17 0 0);
+  --xui-gray-3: oklch(0.21 0 0);
+  --xui-gray-4: oklch(0.25 0 0);
+  --xui-gray-5: oklch(0.29 0 0);
+  --xui-gray-6: oklch(0.34 0 0);
+  --xui-gray-7: oklch(0.40 0 0);
+  --xui-gray-8: oklch(0.50 0 0);
+  --xui-gray-9: oklch(0.62 0 0);
+  --xui-gray-10: oklch(0.68 0 0);
+  --xui-gray-11: oklch(0.78 0 0);
+  --xui-gray-12: oklch(0.96 0 0);
+
+  --xui-accent-1: oklch(0.18 0.02 12);
+  --xui-accent-3: oklch(0.27 0.06 12);
+  --xui-accent-6: oklch(0.42 0.14 12);
+  --xui-accent-9: oklch(0.65 0.20 12);
+  --xui-accent-10: oklch(0.72 0.21 12);
+  --xui-accent-11: oklch(0.80 0.18 12);
+
+  --xui-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.6);
+  --xui-shadow-md: 0 4px 12px -2px rgb(0 0 0 / 0.5);
+  --xui-shadow-lg: 0 12px 32px -4px rgb(0 0 0 / 0.7);
+}

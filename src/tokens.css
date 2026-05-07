@@ -1,0 +1,119 @@
+/* xhs-ui design tokens · 底座 · 所有组件 var(--xui-*) 取这里 */
+
+:root {
+  /* === Color · 12 阶灰阶 (Radix-style · OKLCH) === */
+  --xui-gray-1: oklch(0.99 0 0);     /* 纯净背景 */
+  --xui-gray-2: oklch(0.97 0 0);     /* 应用背景 */
+  --xui-gray-3: oklch(0.94 0 0);     /* hover */
+  --xui-gray-4: oklch(0.91 0 0);     /* 按下 */
+  --xui-gray-5: oklch(0.88 0 0);     /* 选中 */
+  --xui-gray-6: oklch(0.83 0 0);     /* 边框-细 */
+  --xui-gray-7: oklch(0.77 0 0);     /* 边框-中 */
+  --xui-gray-8: oklch(0.66 0 0);     /* 边框-focus */
+  --xui-gray-9: oklch(0.55 0 0);     /* 次要文字 */
+  --xui-gray-10: oklch(0.49 0 0);    /* 弱化文字 */
+  --xui-gray-11: oklch(0.39 0 0);    /* 二级文字 */
+  --xui-gray-12: oklch(0.15 0 0);    /* 主文字 */
+
+  /* === Accent (rose · 价格 / 心 / 关键 CTA) === */
+  --xui-accent-1: oklch(0.99 0.005 12);
+  --xui-accent-3: oklch(0.94 0.04 12);
+  --xui-accent-6: oklch(0.85 0.10 12);
+  --xui-accent-9: oklch(0.65 0.20 12);     /* 主 accent */
+  --xui-accent-10: oklch(0.59 0.21 12);    /* hover */
+  --xui-accent-11: oklch(0.52 0.22 12);    /* 主文字色调 */
+
+  /* === Semantic (语义化 · 组件用这层 · 不直接用上面 scale) === */
+  --xui-bg: var(--xui-gray-1);
+  --xui-bg-subtle: var(--xui-gray-2);
+  --xui-bg-hover: var(--xui-gray-3);
+  --xui-bg-active: var(--xui-gray-4);
+  --xui-bg-elevated: var(--xui-gray-1);
+
+  --xui-fg: var(--xui-gray-12);
+  --xui-fg-muted: var(--xui-gray-11);
+  --xui-fg-subtle: var(--xui-gray-9);
+  --xui-fg-inverse: var(--xui-gray-1);
+
+  --xui-border: var(--xui-gray-6);
+  --xui-border-subtle: var(--xui-gray-5);
+  --xui-border-strong: var(--xui-gray-8);
+
+  --xui-accent: var(--xui-accent-9);
+  --xui-accent-fg: var(--xui-gray-1);
+
+  /* === Spacing (4px 基准) === */
+  --xui-space-0: 0;
+  --xui-space-1: 4px;
+  --xui-space-2: 8px;
+  --xui-space-3: 12px;
+  --xui-space-4: 16px;
+  --xui-space-5: 20px;
+  --xui-space-6: 24px;
+  --xui-space-8: 32px;
+  --xui-space-10: 40px;
+  --xui-space-12: 48px;
+  --xui-space-16: 64px;
+
+  /* === Radius === */
+  --xui-radius-none: 0;
+  --xui-radius-sm: 4px;
+  --xui-radius-md: 8px;
+  --xui-radius-lg: 12px;
+  --xui-radius-xl: 16px;
+  --xui-radius-2xl: 20px;
+  --xui-radius-full: 9999px;
+
+  /* === Font size (1.125 modular scale · iOS native 友好) === */
+  --xui-text-xs: 11px;
+  --xui-text-sm: 13px;
+  --xui-text-base: 15px;
+  --xui-text-md: 16px;
+  --xui-text-lg: 18px;
+  --xui-text-xl: 22px;
+  --xui-text-2xl: 28px;
+  --xui-text-3xl: 34px;
+
+  /* === Font weight === */
+  --xui-weight-regular: 400;
+  --xui-weight-medium: 500;
+  --xui-weight-semibold: 600;
+  --xui-weight-bold: 700;
+
+  /* === Line height === */
+  --xui-leading-tight: 1.2;
+  --xui-leading-snug: 1.35;
+  --xui-leading-normal: 1.5;
+  --xui-leading-relaxed: 1.65;
+
+  /* === Letter spacing === */
+  --xui-tracking-tight: -0.012em;
+  --xui-tracking-normal: 0;
+
+  /* === Shadow (极克制) === */
+  --xui-shadow-none: none;
+  --xui-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+  --xui-shadow-md: 0 4px 12px -2px rgb(0 0 0 / 0.06);
+  --xui-shadow-lg: 0 12px 32px -4px rgb(0 0 0 / 0.10);
+
+  /* === Transition === */
+  --xui-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --xui-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --xui-duration-fast: 120ms;
+  --xui-duration-base: 180ms;
+  --xui-duration-slow: 280ms;
+
+  /* === Z-index === */
+  --xui-z-base: 0;
+  --xui-z-sticky: 20;
+  --xui-z-overlay: 40;
+  --xui-z-modal: 50;
+  --xui-z-toast: 60;
+
+  /* === Font family === */
+  --xui-font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --xui-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+
+  /* === Touch target === */
+  --xui-touch-min: 44px;
+}

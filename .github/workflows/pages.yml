@@ -1,0 +1,39 @@
+name: Deploy demo to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Build site
+        run: |
+          mkdir -p _site
+          cp -r demo/* _site/
+          mkdir -p _site/src
+          cp src/tokens.css src/tokens.dark.css _site/src/
+          # demo/index.html 引用 ../src/*.css · 在 _site 下变成 src/*.css · 调一下路径
+          sed -i 's|../src/tokens.css|src/tokens.css|g' _site/index.html
+          sed -i 's|../src/tokens.dark.css|src/tokens.dark.css|g' _site/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
