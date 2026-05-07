@@ -60,7 +60,15 @@ const darkPalette = {
   accent11: '#f08699',
 } as const
 
-function makeSemantic<P extends typeof lightPalette>(p: P) {
+type Palette = {
+  gray1: string; gray2: string; gray3: string; gray4: string;
+  gray5: string; gray6: string; gray7: string; gray8: string;
+  gray9: string; gray10: string; gray11: string; gray12: string;
+  accent1: string; accent3: string; accent6: string;
+  accent9: string; accent10: string; accent11: string;
+}
+
+function makeSemantic(p: Palette) {
   return {
     bg: p.gray1,
     bgSubtle: p.gray2,
