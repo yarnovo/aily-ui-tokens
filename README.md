@@ -1,5 +1,7 @@
 # @akong/tokens
 
+> ← 回 [akong design system](https://yarnovo.github.io/akong-core/) 总站
+
 akong 设计 token 底座 · **跨端**（Web + React Native）· 公司全产品共用一套。
 
 ## Demo
