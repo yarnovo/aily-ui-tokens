@@ -15,12 +15,12 @@
     --ak-gray-11: #c0c0c0;
     --ak-gray-12: #f0f0f0;
 
-    --ak-accent-1: #2a1c1e;
-    --ak-accent-3: #4a2230;
-    --ak-accent-6: #80344f;
-    --ak-accent-9: #e8456a;
-    --ak-accent-10: #ee5e7d;
-    --ak-accent-11: #f08699;
+    --ak-accent-1: #18181b;
+    --ak-accent-3: #27272a;
+    --ak-accent-6: #52525b;
+    --ak-accent-9: #fafafa;       /* dark mode 反相 · 主 accent 变浅色 */
+    --ak-accent-10: #e4e4e7;
+    --ak-accent-11: #d4d4d8;
 
     --ak-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.6);
     --ak-shadow-md: 0 4px 12px -2px rgb(0 0 0 / 0.5);

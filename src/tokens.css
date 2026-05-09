@@ -15,13 +15,13 @@
   --ak-gray-11: #3a3a3a;    /* 二级文字 */
   --ak-gray-12: #181818;    /* 主文字 */
 
-  /* === Accent (rose · 价格 / 心 / 关键 CTA) === */
-  --ak-accent-1: #fefcfc;
-  --ak-accent-3: #f8e1e5;
-  --ak-accent-6: #f4a8b6;
-  --ak-accent-9: #e8456a;       /* 主 accent */
-  --ak-accent-10: #d62f5b;      /* hover */
-  --ak-accent-11: #b91d4d;      /* 主文字色调 */
+  /* === Accent (shadcn neutral · 老板 5-9 拍 · 极客风通用 · 黑系 primary) === */
+  --ak-accent-1: #fafafa;       /* zinc-50 */
+  --ak-accent-3: #e4e4e7;       /* zinc-200 · 浅 */
+  --ak-accent-6: #71717a;       /* zinc-500 · 中 */
+  --ak-accent-9: #18181b;       /* zinc-900 · 主 accent (primary CTA · 近黑) */
+  --ak-accent-10: #27272a;      /* zinc-800 · hover */
+  --ak-accent-11: #3f3f46;      /* zinc-700 · focus */
 
   /* === Semantic (语义化 · 组件用这层 · 不直接用上面 scale) === */
   --ak-bg: var(--ak-gray-1);
