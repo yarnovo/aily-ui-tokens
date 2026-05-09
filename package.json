@@ -1,5 +1,5 @@
 {
-  "name": "@akong/tokens",
+  "name": "@aily-ui/tokens",
   "version": "0.1.0",
   "description": "akong design token 底座 · 跨端 (Web + React Native) · CSS variables + TypeScript hex 真值",
   "type": "module",

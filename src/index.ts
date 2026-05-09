@@ -2,15 +2,15 @@
  * akong design tokens (跨端 · Web + React Native)
  *
  * 真值 (hex / px) - 跨端通用 · RN 直接用
- *   import { tokens } from '@akong/tokens'
+ *   import { tokens } from '@aily-ui/tokens'
  *   <View style={{ backgroundColor: tokens.light.bg }} />
  *
  * Web 用 CSS variables (CSS 高效 · 暗色自动切)
- *   import '@akong/tokens/style.css'
+ *   import '@aily-ui/tokens/style.css'
  *   <div style={{ background: 'var(--ak-bg)' }} />
  *
  * Web 用 cssVars (TS 类型安全的 var() 字符串)
- *   import { cssVars } from '@akong/tokens'
+ *   import { cssVars } from '@aily-ui/tokens'
  *   <div style={{ background: cssVars.bg }} />
  */
 
